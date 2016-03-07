@@ -64,4 +64,12 @@ public class MiHashMap
         }
         return index;
     }
+    
+    /**
+     * Método que devuelve true si el mapa no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        return (claves.length==0);
+    }
 }
