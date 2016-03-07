@@ -115,5 +115,30 @@ public class MiHashMap
         }
         return valorEliminado;
     }
+
+    /**
+     * Método que vacia el mapa
+     */
+    public void clear()
+    {
+        claves = new String[0];
+        valores = new int[0];
+    }
+    
+    /**
+     * Método que devuelve true si el mapa contiene la clave dada.
+     */
+    public boolean containsKey(String clave)
+    {
+        boolean claveEncontrada = false;
+        int index = 0;
+        while (index<claves.length && !claveEncontrada) {
+            if (claves[index].equals(clave)) {
+                claveEncontrada = true;
+            }
+            index++;
+        }
+        return claveEncontrada;
+    }
 }
 
