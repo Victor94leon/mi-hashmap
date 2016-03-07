@@ -72,4 +72,12 @@ public class MiHashMap
     {
         return (claves.length==0);
     }
+    
+    /**
+     * Método que devuelve el número de elementos del mapa.
+     */
+    public int size()
+    {
+        return claves.length;
+    }
 }
