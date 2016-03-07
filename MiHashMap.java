@@ -23,7 +23,7 @@ public class MiHashMap
         int index = 0;
         boolean claveRepetida = false;
         while (index<valores.length && !claveRepetida ) {
-            if (clave == claves[index]) {
+            if (clave.equals(claves[index])) {
                 claveRepetida = true;
                 valores[index] = valor;
             }
@@ -43,6 +43,24 @@ public class MiHashMap
             nuevosValores[nuevosValores.length - 1] = valor;
             claves = nuevasClaves;
             valores = nuevosValores;
+        }
+        return index;
+    }
+    
+    /**
+     * Método que devuelve el valor asociado con la clave especificada o -1 en caso de que la clave no exista.
+     */
+    public int get(String clave)
+    {
+        int index = -1;
+        int cont = 0;
+        boolean claveEncontrada = false;
+        while (cont<claves.length && !claveEncontrada) {
+            if (claves[cont].equals(clave)) {
+                index = valores[cont];
+                claveEncontrada = true;
+            }
+            cont++;
         }
         return index;
     }
